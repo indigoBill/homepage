@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    margin: 0;
+}
+
+.section {
+    max-width: 2000px;
+    padding: 30px;
+}
+
+.about-me-section {
+    background: linear-gradient(175deg,
+        rgb(236, 252, 236) 60%, 
+        white 40%
+    );
+}
+
+.contact-me-section {
+    background-color: rgb(236, 252, 236);
+}
+
+.about-me-section > .content-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-me-container {
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.about-me-image {
+    background-color: red;
+}
