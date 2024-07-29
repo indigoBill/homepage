@@ -25,6 +25,7 @@ module.exports = {
             title: 'Webpack Template',
             inject: 'head',
             scriptLoading: 'defer',
+            template: './src/index.html',
         }),
     ],
 };
