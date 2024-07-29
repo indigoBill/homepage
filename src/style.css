@@ -33,15 +33,32 @@ body {
 .about-me-section > .content-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .about-me-container {
-    max-width: 600px;
+    max-width: 500px;
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 5px 5px 5px grey;
+    height: fit-content;
 }
 
 .about-me-image {
     background-color: red;
+    height: 300px;
+    width: 250px;
+}
+
+.projects-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+.project {
+    max-width: 200px;
+    height: 250px;
+    width: 100%;
+    background-color: pink;
 }
