@@ -17,6 +17,15 @@ body {
 .section {
     max-width: 2000px;
     padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
 }
 
 .about-me-section {
@@ -30,14 +39,7 @@ body {
     background-color: rgb(236, 252, 236);
 }
 
-.about-me-section > .content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .about-me-container {
-    max-width: 500px;
     background-color: white;
     padding: 20px;
     box-shadow: 5px 5px 5px grey;
@@ -47,24 +49,21 @@ body {
 .about-me-image {
     background-color: red;
     height: auto;
-}
-
-.my-work-section > .content-container {
-
+    width: 250px;
 }
 
 .my-work-title {
-    grid-column: span 3;
-    margin: 0;
+    grid-column: 1 / -1;
+    margin: 0 0 -15px 0;
 }
 
 .projects-container {
     display: grid;
     gap: 20px;
-    max-width: 70%;
-    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-content: center;
     margin: auto;
+    width: 100%;
 }
 
 .project {
@@ -77,8 +76,8 @@ body {
 
 
 
-@media (min-width: 1300px) {
+@media (min-width: 1100px) {
     .projects-container {
-        grid-template-columns: repeat(3, 200px);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
