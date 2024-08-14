@@ -30,9 +30,10 @@ body {
 
 .about-me-section {
     background: linear-gradient(175deg,
-        rgb(236, 252, 236) 60%, 
+        rgb(175, 231, 175) 60%, 
         white 40%
     );
+    padding-top: 80px;
 }
 
 .contact-me-section {
@@ -40,7 +41,7 @@ body {
 }
 
 .about-me-container {
-    background-color: white;
+    background-color: yellow;
     padding: 20px;
     box-shadow: 5px 5px 5px grey;
     height: fit-content;
@@ -49,7 +50,8 @@ body {
 .about-me-image {
     background-color: red;
     height: auto;
-    width: 250px;
+    min-width: 300px;
+    min-height: 350px;
 }
 
 .my-work-title {
@@ -79,5 +81,23 @@ body {
 @media (min-width: 1100px) {
     .projects-container {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 990px) {
+    .about-me-section > .content-container {
+        display: inline;
+    }
+
+    .about-me-image {
+        float: left;
+        position: relative;
+        right: 30px;
+        bottom: 50px;
+        margin: 0 -10px -40px 0;
+    }
+
+    .about-me-text {
+        shape-outside: margin-box;
     }
 }
