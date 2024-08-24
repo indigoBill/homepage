@@ -50,6 +50,20 @@ body {
     height: fit-content;
 }
 
+.about-me-image {
+    position: relative;
+}
+
+.name {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
 .about-me-container > div {
     margin-top: 30px;
     text-align: end;
@@ -82,6 +96,34 @@ body {
 .project {
     height: 330px;
     background-color: pink;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image {
+    flex-grow: 4;
+    background-color: orangered;
+}
+
+.project-description {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    padding: 10px 20px;
+    flex-grow: 1;
+}
+
+.project-description > h3 {
+    margin: 0;
+}
+
+.project-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.project-text {
+    grid-column: span 2;
 }
 
 .contact-me-image {
@@ -95,12 +137,19 @@ body {
     align-self: flex-start;
 }
 
-.contact-info > h2 {
-    margin: 0;
-}
-
 .contact-me-text {
     font-size: 1.5rem;
+}
+
+.contact-info > h2,
+.contact-me-text,
+.address,
+.email {
+    margin: 0 0 25px 0;
+}
+
+.phone-number {
+    margin-bottom: 5px;
 }
 
 .phone-number, .email {
@@ -148,6 +197,10 @@ p {
         shape-outside: margin-box;
     }
 
+    .about-me-container > div {
+        display: none;
+    }
+
     .contact-info {
         font-size: 1rem;
     }
@@ -180,6 +233,8 @@ p {
         margin: 0;
         width: 100%;
         min-width: 150px;
+        display: flex;
+        align-items: end;
     }
 
     .contact-icon {
@@ -197,5 +252,14 @@ p {
     .contact-me-section > .content-container {
         flex-direction: column;
         width: 100%;
+    }
+
+    .name {
+        position: static;
+        transform: translateX(0);
+        width: min-content;
+        height: min-content;
+        margin: 0 10px;
+        font-size: 3.5rem;
     }
 }
