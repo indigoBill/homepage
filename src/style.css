@@ -39,14 +39,10 @@ body {
     background-color: rgb(236, 252, 236);
 }
 
-.contact-me-section > .content-container {
-    justify-content: space-between;
-}
-
 .about-me-container {
     background-color: yellow;
     padding: 20px;
-    box-shadow: 5px 5px 5px grey;
+    box-shadow: 2px 2px 7px grey;
     height: fit-content;
 }
 
@@ -75,8 +71,17 @@ body {
 
 .about-me-image, .contact-me-image {
     background-color: red;
-    min-width: 300px;
     min-height: 350px;
+}
+
+.about-me-image {
+    min-width: 300px;
+}
+
+.contact-me-image {
+    min-width: 250px;
+    height: 100%;
+    width: 100%;
 }
 
 .my-work-title {
@@ -98,6 +103,7 @@ body {
     background-color: pink;
     display: flex;
     flex-direction: column;
+    box-shadow: 2px 2px 7px grey;
 }
 
 .project-image {
@@ -126,11 +132,6 @@ body {
     grid-column: span 2;
 }
 
-.contact-me-image {
-    height: 100%;
-    width: 100%;
-}
-
 .contact-info {
     font-size: 1.2rem;
     margin-right: 20px;
@@ -143,7 +144,7 @@ body {
 
 .contact-info > h2,
 .contact-me-text,
-.address,
+.address2,
 .email {
     margin: 0 0 25px 0;
 }
@@ -159,7 +160,7 @@ body {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 p {
@@ -172,7 +173,7 @@ p {
     }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1000px) {
     /* .content-container {
         width: 90%;
     } */
@@ -217,6 +218,10 @@ p {
 
     .about-me-section {
         padding-top: 30px;
+        background: linear-gradient(150deg,
+        rgb(175, 231, 175) 35%, 
+        white 35%
+        );
     }
 
     .about-me-section > .content-container {
@@ -235,6 +240,39 @@ p {
         min-width: 150px;
         display: flex;
         align-items: end;
+        box-shadow: 2px 2px 7px grey;
+    }
+
+    .about-me-container {
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 20px 0;
+    }
+
+    .about-me-container > div {
+        display: block;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+
+    .my-work-title {
+        text-align: center;
+    }
+
+    .project-description {
+        flex-grow: 0;
+    }
+
+    .contact-info {
+        margin-right: 0;
+        padding: 20px 0 60px 0;
+    }
+
+    .contact-info > h2,
+    .contact-info > div:last-child {
+        text-align: center;
     }
 
     .contact-icon {
@@ -242,16 +280,14 @@ p {
     }
 
     .contact-me-image {
-        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     .contact-me-section {
         padding: 0;
-    }
-
-    .contact-me-section > .content-container {
-        flex-direction: column;
-        width: 100%;
+        position: relative;
     }
 
     .name {
