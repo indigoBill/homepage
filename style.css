@@ -7,6 +7,12 @@ html {
     box-sizing: inherit;
 }
 
+:root {
+    --main-color: rgb(90, 131, 90);
+    --side-color: rgb(255, 98, 62);
+    /* font-family: arcadeClassic, karmaArcade, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+}
+
 body {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -29,10 +35,7 @@ body {
 }
 
 .about-me-section {
-    background: linear-gradient(175deg,
-        rgb(175, 231, 175) 60%, 
-        white 40%
-    );
+    background: linear-gradient(168deg, var(--main-color), var(--main-color) 52%, white 52.2%, white 100%);
 }
 
 .contact-me-section {
@@ -40,10 +43,12 @@ body {
 }
 
 .about-me-container {
-    background-color: yellow;
+    background-color: white;
     padding: 20px 20px 40px 20px;
     box-shadow: 2px 2px 7px grey;
     height: fit-content;
+    border-radius: 10px;
+    border: 5px solid var(--side-color);
 }
 
 .about-me-image {
@@ -70,12 +75,20 @@ body {
 }
 
 .about-me-image, .contact-me-image {
-    background-color: red;
+    background-color: rgb(255, 98, 62);
     min-height: 350px;
 }
 
 .about-me-image {
     min-width: 300px;
+}
+
+.about-me-icons {
+    justify-content: end;
+}
+
+.about-me-social {
+    height: 30px;
 }
 
 .contact-me-image {
@@ -167,9 +180,14 @@ body {
     gap: 10px;
 }
 
-.social-icons {
+.about-me-icons,
+.contact-me-icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+}
+
+.contact-me-social {
+    height: 40px;
 }
 
 h2 {
@@ -193,10 +211,7 @@ p {
 
     .about-me-section {
         padding-top: 80px;
-        background: linear-gradient(165deg,
-        rgb(175, 231, 175) 57%, 
-        white 57%
-        );
+        background: linear-gradient(165deg, var(--main-color), var(--main-color) 57%, white 57.2%, white 100%);
     }
 
     .about-me-section > .content-container {
@@ -242,10 +257,7 @@ p {
 
     .about-me-section {
         padding-top: 30px;
-        background: linear-gradient(150deg,
-        rgb(175, 231, 175) 35%, 
-        white 35%
-        );
+        background: linear-gradient(150deg, var(--main-color), var(--main-color) 35%, white 35.2%, white 100%);
     }
 
     .about-me-section > .content-container {
