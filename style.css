@@ -125,7 +125,15 @@ body {
 
 .project-icons {
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    height: fit-content;
+    width: fit-content;
+    justify-content: space-between;
+    justify-self: end;
+}
+
+.redirect-icon {
+    width: 24px;
 }
 
 .project-text {
@@ -156,6 +164,11 @@ body {
 .phone-number, .email {
     display: flex;
     align-items: center;
+    gap: 10px;
+}
+
+.social-icons {
+    display: flex;
     gap: 10px;
 }
 
