@@ -48,9 +48,11 @@ body {
     box-shadow: 2px 2px 7px grey;
     height: fit-content;
     border-radius: 0 10px 10px 0;
-    border-top: 5px solid var(--side-color);
-    border-right: 5px solid var(--side-color);
-    border-bottom: 5px solid var(--side-color);
+    border: 5px solid var(--side-color);
+    
+    transform-origin: top left;
+    animation: 2s ease-in 0s 1 swingIntro;
+    perspective: 240px;
 }
 
 .about-me-image {
@@ -134,7 +136,6 @@ body {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 2fr;
     padding: 10px 20px;
-    flex-grow: 1;
 }
 
 .project-description > h3 {
@@ -209,6 +210,18 @@ p {
     margin: 0;
 }
 
+@keyframes swingIntro {
+    0% {
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+    60% {
+        transform: rotate3d(0, 1, 0, -10deg);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+
 @media (min-width: 1100px) {
     .projects-container {
         grid-template-columns: repeat(3, 1fr);
@@ -265,6 +278,9 @@ p {
         font-size: 1.2rem;
     }
 
+    .contact-me-icons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 610px) {
