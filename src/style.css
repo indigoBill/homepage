@@ -35,7 +35,7 @@ body {
 }
 
 .about-me-section {
-    background: linear-gradient(168deg, var(--main-color), var(--main-color) 52%, white 52.2%, white 100%);
+    background: linear-gradient(168deg, var(--main-color) 52%, white 52.2%);
 }
 
 .contact-me-section {
@@ -50,13 +50,23 @@ body {
     border-radius: 0 10px 10px 0;
     border: 5px solid var(--side-color);
     
+    transform: rotate3d(0, 1, 0, 90deg);
     transform-origin: top left;
-    animation: 2s ease-in 0s 1 swingIntro;
+    animation-name: swingIntro;
+    animation-duration: 1.3s;
+    animation-delay: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.39, -0.06, 0, 1.58);
+    animation-fill-mode: forwards;
     perspective: 240px;
 }
 
 .about-me-image {
     position: relative;
+    min-width: 300px;
+    z-index: 1;
+
+    animation: .5s cubic-bezier(0, 0, 0, 1.02) 1 slideDown;
 }
 
 .name {
@@ -81,10 +91,6 @@ body {
 .about-me-image, .contact-me-image {
     background-color: rgb(255, 98, 62);
     min-height: 350px;
-}
-
-.about-me-image {
-    min-width: 300px;
 }
 
 .about-me-icons {
@@ -127,6 +133,10 @@ body {
 }
 
 .project-image {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 3rem;
     flex-grow: 4;
     background-color: orangered;
 }
@@ -214,11 +224,19 @@ p {
     0% {
         transform: rotate3d(0, 1, 0, 90deg);
     }
-    60% {
-        transform: rotate3d(0, 1, 0, -10deg);
-    }
     100% {
         transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-200px);
+        opacity: 50%;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
     }
 }
 
