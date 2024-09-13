@@ -35,11 +35,11 @@ body {
 }
 
 .about-me-section {
-    background: linear-gradient(168deg, var(--main-color) 52%, white 52.2%);
+    background: linear-gradient(168deg, rgb(151, 187, 134) 10%, var(--main-color) 40%, var(--main-color) 52%, white 52.2%);
 }
 
 .contact-me-section {
-    background-color: var(--main-color);
+    background: linear-gradient(180deg, var(--main-color) 60%, rgb(114, 143, 100));
 }
 
 .about-me-container {
@@ -130,6 +130,10 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 7px grey;
+}
+
+.project:hover {
+    scale: 1.03;
 }
 
 .project-image {
@@ -240,6 +244,10 @@ p {
     }
 }
 
+@keyframes gradientReveal {
+   
+}
+
 @media (min-width: 1100px) {
     .projects-container {
         grid-template-columns: repeat(3, 1fr);
@@ -247,10 +255,6 @@ p {
 }
 
 @media (max-width: 1000px) {
-    /* .content-container {
-        width: 90%;
-    } */
-
     .about-me-section {
         padding-top: 80px;
         background: linear-gradient(165deg, var(--main-color), var(--main-color) 57%, white 57.2%, white 100%);
