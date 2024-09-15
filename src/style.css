@@ -35,7 +35,7 @@ body {
 }
 
 .about-me-section {
-    background: linear-gradient(168deg, rgb(151, 187, 134) 10%, var(--main-color) 40%, var(--main-color) 52%, white 52.2%);
+    background: linear-gradient(168deg, rgb(151, 187, 134) 10%, var(--main-color) 40%, var(--main-color) 50%, white 50.2%);
 }
 
 .contact-me-section {
@@ -130,19 +130,27 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 7px grey;
+    border-radius: 10px 10px 5px 5px;
 }
 
 .project:hover {
     scale: 1.03;
 }
 
-.project-image {
+.project-image-container {
     color: white;
     text-align: center;
-    padding-top: 50px;
     font-size: 3rem;
     flex-grow: 4;
-    background-color: orangered;
+    background-color: orange;
+    border: 5px solid orangered;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
 }
 
 .project-description {
@@ -150,6 +158,7 @@ body {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 2fr;
     padding: 10px 20px;
+    border-radius: 0 0 5px 5px;
 }
 
 .project-description > h3 {
