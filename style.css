@@ -89,7 +89,7 @@ body {
 }
 
 .about-me-image, .contact-me-image {
-    background-color: rgb(255, 98, 62);
+    background-color: var(--side-color);
     min-height: 350px;
 }
 
@@ -142,15 +142,40 @@ body {
     text-align: center;
     font-size: 3rem;
     flex-grow: 4;
-    background-color: orange;
+    background: linear-gradient(135deg, var(--side-color) 40%, orange);
     border: 5px solid orangered;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
 }
 
 .project-image {
+    object-fit: contain;
     width: 100%;
     height: 100%;
+}
+
+.battleship-switch:hover {
+    content: url("./img/projectImgsGifs/battleship.gif");
+}
+
+.weather-switch:hover {
+    content: url("./img/projectImgsGifs/weatherApp.gif");
+}
+
+.todo-list-switch:hover {
+    content: url("./img/projectImgsGifs/toDoLIst.gif");
+}
+
+.rps-switch:hover {
+    content: url("./img/projectImgsGifs/rps.gif");
+}
+
+.etchSketch-switch:hover {
+    content: url("./img/projectImgsGifs/etchSketch.gif");
+}
+
+.calculator-switch:hover {
+    content: url("./img/projectImgsGifs/calculator.gif");
 }
 
 .project-description {
