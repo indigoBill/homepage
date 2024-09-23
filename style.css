@@ -140,10 +140,17 @@ body {
     flex-direction: column;
     box-shadow: 2px 2px 7px grey;
     border-radius: 10px 10px 5px 5px;
+    overflow: hidden;
+
+    view-timeline-name: --reveal-project;
+    view-timeline-axis: block;
+    animation: scrollReveal linear both;
+    animation-timeline: --reveal-project;
+    animation-range: entry 5% cover 40%;
 }
 
 .project:hover {
-    scale: 1.03;
+    transform: scale(1.03);
 }
 
 .project-image-container {
@@ -197,6 +204,22 @@ body {
 
 .project-description > h3 {
     margin: 0;
+    z-index: 1;
+}
+
+.project-title-highlight {
+    position: absolute;
+    left: -200px;
+    transition: left 1s;
+    height: 25px;
+    width: 190px;
+    background-color: orangered;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 1px 2px 5px grey;
+}
+
+.project:hover .project-title-highlight {
+    left: 0;
 }
 
 .project-icons {
@@ -287,8 +310,15 @@ p {
     }
 }
 
-@keyframes gradientReveal {
-   
+@keyframes scrollReveal {
+    from {
+		opacity: 0;
+        scale: .7;
+	}
+	to {
+		opacity: 1;
+        scale: 1;
+	}
 }
 
 @media (min-width: 1100px) {
