@@ -113,6 +113,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: invert(20%);
+}
+
+.contact-me-image .image-icon {
     filter: invert(100%);
 }
 
@@ -215,7 +219,7 @@ body {
     left: -200px;
     transition: left 1s;
     height: 25px;
-    width: 190px;
+    width: 170px;
     background-color: orangered;
     border-radius: 0 20px 20px 0;
     box-shadow: 1px 2px 5px grey;
@@ -244,6 +248,7 @@ body {
 
 .project-text {
     grid-column: span 2;
+    min-height: 90px;
 }
 
 .contact-info {
@@ -430,7 +435,7 @@ p {
     }
 
     .about-me-image .image-icon {
-        top: 18%;
+        top: 24%;
     }
 
     .my-work-title {
