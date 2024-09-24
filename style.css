@@ -147,10 +147,11 @@ body {
     animation: scrollReveal linear both;
     animation-timeline: --reveal-project;
     animation-range: entry 5% cover 40%;
+    animation-fill-mode: backwards;
 }
 
 .project:hover {
-    transform: scale(1.03);
+    scale: 1.03;
 }
 
 .project-image-container {
@@ -205,6 +206,8 @@ body {
 .project-description > h3 {
     margin: 0;
     z-index: 1;
+    color: black;
+    transition: color 1s;
 }
 
 .project-title-highlight {
@@ -220,6 +223,10 @@ body {
 
 .project:hover .project-title-highlight {
     left: 0;
+}
+
+.project:hover h3 {
+    color: white;
 }
 
 .project-icons {
@@ -420,6 +427,10 @@ p {
         position: absolute;
         width: 100%;
         justify-content: center;
+    }
+
+    .about-me-image .image-icon {
+        top: 18%;
     }
 
     .my-work-title {
