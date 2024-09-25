@@ -39,6 +39,7 @@ body {
 }
 
 .contact-me-section {
+    overflow-x: clip;
     background: linear-gradient(180deg, var(--main-color) 60%, rgb(114, 143, 100));
 }
 
@@ -62,7 +63,6 @@ body {
 }
 
 .about-me-image {
-    position: relative;
     min-width: 300px;
     z-index: 1;
 
@@ -106,17 +106,28 @@ body {
     min-width: 250px;
     height: 100%;
     width: 100%;
+    position: relative;
+
+    view-timeline-name: --reveal-project;
+    view-timeline-axis: block;
+    animation: slideReveal ease-in both;
+    animation-timeline: --reveal-project;
+    animation-range: entry 5% cover 40%;
+    animation-fill-mode: backwards;
 }
 
 .image-icon {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.about-me-image .image-icon {
+    transform: translate(-50%, 20%);
     filter: invert(20%);
 }
 
 .contact-me-image .image-icon {
+    transform: translate(-50%, 20%);
     filter: invert(100%);
 }
 
@@ -333,6 +344,16 @@ p {
 	}
 }
 
+@keyframes slideReveal {
+    from {
+		transform: translateX(300px);
+	}
+	to {
+        transform: translateX(-200px);
+
+	}
+}
+
 @media (min-width: 1100px) {
     .projects-container {
         grid-template-columns: repeat(3, 1fr);
@@ -374,6 +395,10 @@ p {
 
     .about-me-icons {
         display: none;
+    }
+
+    .about-me-image .image-icon {
+        transform: translate(-50%, 20%);
     }
 
     .contact-info {
@@ -435,7 +460,7 @@ p {
     }
 
     .about-me-image .image-icon {
-        top: 24%;
+        transform: translate(-50%, -20%);
     }
 
     .my-work-title {
