@@ -112,8 +112,7 @@ body {
     view-timeline-axis: block;
     animation: slideReveal ease-in both;
     animation-timeline: --reveal-project;
-    animation-range: entry 5% cover 40%;
-    animation-fill-mode: backwards;
+    animation-range: entry 5%;
 }
 
 .image-icon {
@@ -347,10 +346,11 @@ p {
 @keyframes slideReveal {
     from {
 		transform: translateX(300px);
+        opacity: 0;
 	}
 	to {
-        transform: translateX(-200px);
-
+        transform: translateX(0);
+        opacity: 1;
 	}
 }
 
@@ -360,7 +360,7 @@ p {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .about-me-section {
         padding-top: 80px;
         background: linear-gradient(165deg, var(--main-color), var(--main-color) 57%, white 57.2%, white 100%);
@@ -411,7 +411,11 @@ p {
     }
 
     .contact-me-icons {
-        justify-content: center;
+        justify-content: left;
+    }
+
+    .contact-me-image {
+        animation: none;
     }
 }
 
@@ -483,6 +487,10 @@ p {
 
     .contact-icon {
         display: none;
+    }
+
+    .contact-me-icons {
+        justify-content: center;
     }
 
     .contact-me-image {
